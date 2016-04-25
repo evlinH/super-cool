@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SuperCool" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="Hbw-yo-BJz"/>
+                        <viewControllerLayoutGuide type="bottom" id="YB4-ce-Iq3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kabuum-epp" translatesAutoresizingMaskIntoConstraints="NO" id="eyx-0M-alt">
+                                <rect key="frame" x="0.0" y="28" width="414" height="302"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="302" id="zEr-Iu-dlL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X00-DK-8QI">
+                                <rect key="frame" x="135" y="353" width="145" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Make Me Super Cool">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MakeMeCool:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Pp3-dp-53m"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="po_clear" translatesAutoresizingMaskIntoConstraints="NO" id="TJT-IT-dHO">
+                                <rect key="frame" x="0.0" y="307" width="414" height="429"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="PAn-KH-Ed4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X00-DK-8QI" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="1rP-90-C1Z"/>
+                            <constraint firstItem="X00-DK-8QI" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="1uh-O6-OIS"/>
+                            <constraint firstItem="TJT-IT-dHO" firstAttribute="leading" secondItem="eyx-0M-alt" secondAttribute="leading" id="7GR-sM-fXO"/>
+                            <constraint firstItem="YB4-ce-Iq3" firstAttribute="top" secondItem="TJT-IT-dHO" secondAttribute="bottom" constant="4" id="AMb-Ln-r4f"/>
+                            <constraint firstItem="eyx-0M-alt" firstAttribute="top" secondItem="Hbw-yo-BJz" secondAttribute="bottom" constant="8" symbolic="YES" id="F2R-qF-bzV"/>
+                            <constraint firstItem="eyx-0M-alt" firstAttribute="trailing" secondItem="TJT-IT-dHO" secondAttribute="trailing" id="bOW-TX-i5H"/>
+                            <constraint firstItem="TJT-IT-dHO" firstAttribute="top" secondItem="Hbw-yo-BJz" secondAttribute="bottom" constant="283" id="cUU-YF-4q9"/>
+                            <constraint firstItem="eyx-0M-alt" firstAttribute="centerX" secondItem="X00-DK-8QI" secondAttribute="centerX" id="zo3-eZ-ndp"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="superCoolBG" destination="TJT-IT-dHO" id="QxV-FB-HE8"/>
+                        <outlet property="superCoolLogo" destination="eyx-0M-alt" id="c4r-7C-QPX"/>
+                        <outlet property="unCoolButton" destination="X00-DK-8QI" id="kAY-eI-WNv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="262" y="444"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kabuum-epp" width="466" height="118"/>
+        <image name="po_clear" width="462" height="477"/>
+    </resources>
 </document>
